@@ -1,0 +1,14 @@
+﻿name: Auto commit
+on:
+  push:
+    branch:
+      - master
+    schedule:
+      - cron: "0 7 * * *"
+jobs:
+  auto_commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Jobs
+        run: |
+          echo "This is a test job."
